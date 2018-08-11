@@ -1,0 +1,1 @@
+# [mdns\_repeater](https://godoc.org/go.jonnrb.io/mdns_repeater/cmd/mdns_repeater) [![Build Status](https://drone.jonnrb.com/api/badges/jon/mdns_repeater/status.svg?branch=master)](https://drone.jonnrb.com/jon/mdns_repeater)
