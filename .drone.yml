@@ -4,6 +4,7 @@ pipeline:
     repo: quay.io/jonnrb/mdns_repeater
     registry: quay.io
     storage_driver: overlay2
+    dockerfile: ./cmd/mdns_repeater/Dockerfile
     secrets:
       - source: quay_username
         target: docker_username
