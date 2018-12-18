@@ -1,12 +1,21 @@
-pipeline:
-  quay:
-    image: plugins/docker
-    repo: quay.io/jonnrb/mdns_repeater
-    registry: quay.io
-    storage_driver: overlay2
+---
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: docker
+  image: plugins/docker
+  settings:
     dockerfile: ./cmd/mdns_repeater/Dockerfile
-    secrets:
-      - source: quay_username
-        target: docker_username
-      - source: quay_password
-        target: docker_password
+    password:
+      from_secret: quay_password
+    registry: quay.io
+    repo: quay.io/jonnrb/mdns_repeater
+    username:
+      from_secret: quay_username
+
+...
